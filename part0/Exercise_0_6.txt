@@ -1,0 +1,13 @@
+note over browser:
+user enters text "Hello World!"
+user clicks save button
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa 
+browser->server: [{ content: "Hello World!", date: "2022-09-01T09:07:38.373Z" }]
+server-->browser: HTTPS status code 201
+
+note over browser:
+browser starts executing js-code
+that adds new note to the web page 
+end note
